@@ -1,0 +1,29 @@
+primero deshabilita la restriccion para correr scripts en tu windows:
+
+    accesas a PS en modo administrador:
+
+    buscan la app powershell clisk derecho run as administrator
+
+    Get-ExecutionPolicy
+    Set-ExecutionPolicy Unrestricted
+
+    para volverla a dejar como estaba
+    Set-ExecutionPolicy Restricted
+########################
+paso 2: habilitar el venv (checa la ruta de tu directorio)
+    python -m venv C:\Users\tuUsuario\computo_nube\docker_api\venv
+
+    dentro encontraran un ejecutable llamado Activate.ps1
+
+    hay que ejecutarlo:
+    C:\Users\khemtz\computo_nube\docker_api\venv\Scripts\Activate.ps1
+
+    ahora veras en tu prompt el mensaje (venv)
+    (venv) PS C:\Users\khemtz\computo_nube\docker_api>
+
+    Aqui estas aislando tu app python en un ambiente virtual, vamos a instalar las sigueinte librerias flask y request:
+    pip install flask requests​
+
+una vez hecho esto puedes probar en tu ambiente que se ejecute tu app:
+
+python app.py
